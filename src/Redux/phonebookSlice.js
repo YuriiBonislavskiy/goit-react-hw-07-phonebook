@@ -1,11 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { getContacts, addContacts, deleteContacts } from 'Redux/operations';
 
+
 const handlePending = state => {
   state.contacts.isLoading = true;
 };
 const handleRejected = (state, { payload }) => {
-  alert('An error occurred during the operation!!!');
+  alert('An error occurred during the operation!!! Please reload the page!!!');
   state.contacts.isLoading = false;
   state.contacts.error = payload;
 };
