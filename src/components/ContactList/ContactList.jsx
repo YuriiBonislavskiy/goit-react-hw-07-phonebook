@@ -22,8 +22,8 @@ const ContactsList = () => {
   return (
     
     <ul className={css.contactlist}>
-      {error ? <div>{error}</div> :
-      visibleContacts.map(({ id, name, phone }) => (
+      {/* {error && <div>{error}</div> } */}
+      {visibleContacts.map(({ id, name, phone }) => (
         <li className={css.contactitem} key={id}>
           <ContactsListItem id={id} name={name} number={phone} />
         </li>

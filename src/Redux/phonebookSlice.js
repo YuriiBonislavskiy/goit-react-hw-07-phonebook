@@ -5,6 +5,7 @@ const handlePending = state => {
   state.contacts.isLoading = true;
 };
 const handleRejected = (state, { payload }) => {
+  alert('An error occurred during the operation!!!');
   state.contacts.isLoading = false;
   state.contacts.error = payload;
 };
