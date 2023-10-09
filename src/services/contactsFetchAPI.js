@@ -12,12 +12,15 @@ export const fetchContacts = async ({ action, item }) => {
       }
       console.log('ERROR');
       return Promise.reject(new Error("No data found"));
+    
     case 'POST':
       const addResponse = await axios.post(`/contacts`, item);
       return addResponse;
+    
     case 'DELETE':
       const deletedResponse = await axios.delete(`/contacts/${item}`);
       return deletedResponse;
+    
     default:
       return;
   }
