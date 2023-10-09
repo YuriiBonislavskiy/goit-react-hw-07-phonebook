@@ -6,7 +6,7 @@ import ContactsListItem from '../ContactsListItem';
 const ContactsList = () => {
   const contacts = useSelector(state => state.contacts.items);
   const filter = useSelector(state => state.filter);
-  const error = useSelector(state => state.contacts.error);
+  // const error = useSelector(state => state.contacts.error);
 
 
   const getVisibleContacts = () => {
